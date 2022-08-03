@@ -39,6 +39,7 @@ const operationTabList = [
 ];
 
 const TagList: React.FC<{ tags: CurrentUser['tags'] }> = ({ tags }) => {
+  // @ts-ignore
   const ref = useRef<Input | null>(null);
   const [newTags, setNewTags] = useState<TagType[]>([]);
   const [inputVisible, setInputVisible] = useState<boolean>(false);
@@ -164,7 +165,7 @@ const Center: React.FC<RouteChildrenProps> = () => {
             {!loading && currentUser && (
               <div>
                 <div className={styles.avatarHolder}>
-                  <img alt="" src={currentUser.avatar} />
+                  <img alt="" src={currentUser.avatarUrl} />
                   <div className={styles.name}>{currentUser.name}</div>
                   <div>{currentUser?.signature}</div>
                 </div>

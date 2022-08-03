@@ -492,10 +492,10 @@
       "LoginParams": {
         "type": "object",
         "properties": {
-          "username": {
+          "userAccount": {
             "type": "string"
           },
-          "password": {
+          "userPassword": {
             "type": "string"
           },
           "autoLogin": {
