@@ -24,6 +24,16 @@ declare namespace API {
   };
 
   type LoginResult = {
+    id?:number;
+    role?:number;
+    userAccount?:string;
+    username?:string;
+    userPassword?:string;
+    avatarUrl?:string;
+    email?:string
+    gender?:number;
+    phone?:string;
+    createTime?:Date;
     status?: string;
     type?: string;
     currentAuthority?: string;
@@ -62,8 +72,8 @@ declare namespace API {
   };
 
   type LoginParams = {
-    username?: string;
-    password?: string;
+    userAccount?: string;
+    userPassword?: string;
     autoLogin?: boolean;
     type?: string;
   };
